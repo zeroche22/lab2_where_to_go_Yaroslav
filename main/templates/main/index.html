@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+{% block title %}Головна{% endblock %}
+{% block content %}
+<h1>Мої улюблені місця</h1>
+<p>Натисніть кнопку, щоб обрати куди піти сьогодні.</p>
+
+<button onclick="askRandom()">Куди піти сьогодні? (AJAX)</button>
+<form method="get" action=".">
+  <button type="submit" name="random_preview" value="1">Куди піти сьогодні? (reload)</button>
+</form>
+
+<div id="random-result">
+  {% if preview %}
+    <h3>{{ preview.name }}</h3>
+    <p>{{ preview.description }}</p>
+    <p>Рейтинг:
+      {% for i in "12345" %}
+        {% if forloop.counter <= preview.rating %}★{% else %}☆{% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+</div>
+{% endblock %}

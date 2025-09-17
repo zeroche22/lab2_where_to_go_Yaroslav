@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}{{ place.name }}{% endblock %}
+{% block content %}
+<h1>{{ place.name }}</h1>
+<img src="{% static 'img/okak.jpg' %}" alt="{{ place.name }}" style="max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
+<p><strong>Тип:</strong> {{ place.type }}</p>
+<p><strong>Локація:</strong> {% if place.location %}{{ place.location }}{% else %}Secret place{% endif %}</p>
+<p><strong>Дата:</strong> {{ place.created }}</p>
+<p><strong>Рейтинг:</strong>
+  {% for i in "12345" %}
+    {% if forloop.counter <= place.rating %}★{% else %}☆{% endif %}
+  {% endfor %}
+</p>
+<hr>
+<p>{{ place.description }}</p>
+<a href="{% url 'place_list' %}">← Додому я просилася, а він мене все не пускав</a>
+{% endblock %}

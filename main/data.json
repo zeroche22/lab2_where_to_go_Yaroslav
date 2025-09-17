@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Кавʼярня BlackHoney",
+    "description": "Затишна кавʼярня з домашньою випічкою та швидким Wi-Fi. Беріть тост с лососем",
+    "type": "Кавʼярня",
+    "location": "вул. Хрещатик, 10",
+    "rating": 5,
+    "created": "2025-09-16",
+    "photo": "places/images/placeholder.jpg"
+  },
+  {
+    "name": "Хюге",
+    "description": "Беріть Ньокі з гарганзолою та куркою по-пекінськи, а також курка сувід з креветкою ",
+    "type": "Парк",
+    "location": "",
+    "rating": 5,
+    "created": "2025-09-16",
+    "photo": "places/images/placeholder.jpg"
+  },
+  {
+    "name": "сільпо",
+    "description": "перед кмц",
+    "type": "за догоном",
+    "location": "кт",
+    "rating": 5,
+    "created": "2025-09-16",
+    "photo": "main/img/okak.jpg"
+  }
+]
